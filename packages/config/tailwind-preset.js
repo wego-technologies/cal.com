@@ -15,22 +15,30 @@ module.exports = {
       sans: ['"Inter var"', "sans-serif"],
     },
     extend: {
+      borderRadius: {
+        none: "0px",
+        sm: "8px",
+        DEFAULT: "8px",
+        md: "8px",
+        lg: "8px",
+        xl: "12px",
+        "2xl": "16px",
+        "3xl": "24px",
+        full: "9999px",
+      },
       colors: {
         /* your primary brand color */
         brand: {
-          // TODO: To be shared between Storybook for v2 UI components and web
-          // Figure out a way to automate this for self hosted users
-          // Goto https://javisperez.github.io/tailwindcolorshades to generate your brand color
-          50: "#d1d5db",
-          100: "#9ca3af",
-          200: "#6b7280",
-          300: "#4b5563",
-          400: "#374151",
-          500: "#111827", // Brand color
-          600: "#0f1623",
-          700: "#0d121d",
-          800: "#0a0e17",
-          900: "#080c13",
+          50: "#f2fafd",
+          100: "#e6f6fb",
+          200: "#bfe8f4",
+          300: "#99d9ed",
+          400: "#4dbde0",
+          500: "#00a1d3",
+          600: "#0091be",
+          700: "#00799e",
+          800: "#00617f",
+          900: "#004f67",
           DEFAULT: "var(--brand-color)",
         },
         brandcontrast: "var(--brand-text-color)",
