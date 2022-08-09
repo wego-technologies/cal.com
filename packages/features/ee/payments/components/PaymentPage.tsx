@@ -52,7 +52,7 @@ const PaymentPage: FC<PaymentPageProps> = (props) => {
     <div className="h-screen">
       <Head>
         <title>
-          {t("payment")} | {eventName} | Cal.com
+          {t("payment")} | {eventName} | Gatego Scheduling
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>

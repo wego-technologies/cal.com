@@ -479,7 +479,7 @@ const BookingPage = ({
                 eventTypeTitle: eventType.title,
                 profileName: profile.name,
               })}{" "}
-          | Cal.com
+          | Gatego Scheduling
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
