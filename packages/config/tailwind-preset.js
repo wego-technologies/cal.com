@@ -14,18 +14,18 @@ module.exports = {
       mono: ["Roboto Mono", "monospace"],
       sans: ['"Inter var"', "sans-serif"],
     },
+    borderRadius: {
+      none: "0px",
+      sm: "8px",
+      DEFAULT: "8px",
+      md: "8px",
+      lg: "8px",
+      xl: "12px",
+      "2xl": "16px",
+      "3xl": "24px",
+      full: "9999px",
+    },
     extend: {
-      borderRadius: {
-        none: "0px",
-        sm: "8px",
-        DEFAULT: "8px",
-        md: "8px",
-        lg: "8px",
-        xl: "12px",
-        "2xl": "16px",
-        "3xl": "24px",
-        full: "9999px",
-      },
       colors: {
         /* your primary brand color */
         brand: {
