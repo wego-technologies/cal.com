@@ -257,9 +257,9 @@ const BrandColor = ({
       /* gray--900 */
       --booking-darker-color: ${embedBrandingColors.darkerColor || "#292929"};
       --brand-color: ${lightVal};
-      --brand-text-color: ${getContrastingTextColor(lightVal, true)};
+      --brand-text-color: ${brandTextColor};
       --brand-color-dark-mode: ${darkVal};
-      --brand-text-color-dark-mode: ${getContrastingTextColor(darkVal, true)};
+      --brand-text-color-dark-mode: ${brandTextColor};
     `}
       </style>
     </Head>
