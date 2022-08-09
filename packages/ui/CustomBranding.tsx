@@ -196,9 +196,11 @@ function normalizeHexCode(hex: string | null, dark: boolean) {
 function getContrastingTextColor(bgColor: string | null, dark: boolean): string {
   bgColor = bgColor == "" || bgColor == null ? (dark ? darkBrandColor : brandColor) : bgColor;
   const rgb = hexToRGB(bgColor);
-  const whiteContrastRatio = computeContrastRatio(rgb, [255, 255, 255]);
-  const blackContrastRatio = computeContrastRatio(rgb, [41, 41, 41]); //#292929
-  return whiteContrastRatio > blackContrastRatio ? brandTextColor : brandColor;
+  // Force the text to be white
+  // const whiteContrastRatio = computeContrastRatio(rgb, [255, 255, 255]);
+  // const blackContrastRatio = computeContrastRatio(rgb, [41, 41, 41]); //#292929
+  // return whiteContrastRatio > blackContrastRatio ? brandTextColor : brandColor;
+  return brandTextColor;
 }
 
 export function isValidHexCode(val: string | null) {
