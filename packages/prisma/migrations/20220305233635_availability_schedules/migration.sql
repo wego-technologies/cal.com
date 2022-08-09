@@ -16,7 +16,7 @@ ADD COLUMN     "scheduleId" INTEGER;
 -- AlterTable
 ALTER TABLE "Schedule" DROP COLUMN "freeBusyTimes",
 DROP COLUMN "title",
-ADD COLUMN     "name" TEXT NOT NULL,
+ADD COLUMN     "name" TEXT,
 ADD COLUMN     "timeZone" TEXT,
 ALTER COLUMN "userId" SET NOT NULL;
 
