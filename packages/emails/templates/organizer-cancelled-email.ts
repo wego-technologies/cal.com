@@ -14,7 +14,7 @@ export default class OrganizerCancelledEmail extends OrganizerScheduledEmail {
     }
 
     return {
-      from: `Gatego Schduling <${this.getMailerOptions().from}>`,
+      from: `Gatego Scheduling <${this.getMailerOptions().from}>`,
       to: toAddresses.join(","),
       subject: `${this.t("event_cancelled_subject", {
         eventType: this.calEvent.type,

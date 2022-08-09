@@ -23,7 +23,7 @@ export default class TeamInviteEmail extends BaseEmail {
   protected getNodeMailerPayload(): Record<string, unknown> {
     return {
       to: this.teamInviteEvent.to,
-      from: `Gatego Schduling <${this.getMailerOptions().from}>`,
+      from: `Gatego Scheduling <${this.getMailerOptions().from}>`,
       subject: this.teamInviteEvent.language("user_invited_you", {
         user: this.teamInviteEvent.from,
         team: this.teamInviteEvent.teamName,

@@ -18,7 +18,7 @@ export default class OrganizerRescheduledEmail extends OrganizerScheduledEmail {
         filename: "event.ics",
         content: this.getiCalEventAsString(),
       },
-      from: `Gatego Schduling <${this.getMailerOptions().from}>`,
+      from: `Gatego Scheduling <${this.getMailerOptions().from}>`,
       to: toAddresses.join(","),
       subject: `${this.calEvent.organizer.language.translate("rescheduled_event_type_subject", {
         eventType: this.calEvent.type,

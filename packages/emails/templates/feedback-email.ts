@@ -18,7 +18,7 @@ export default class FeedbackEmail extends BaseEmail {
 
   protected getNodeMailerPayload(): Record<string, unknown> {
     return {
-      from: `Gatego Schduling <${this.getMailerOptions().from}>`,
+      from: `Gatego Scheduling <${this.getMailerOptions().from}>`,
       to: process.env.SEND_FEEDBACK_EMAIL,
       subject: `User Feedback`,
       html: renderEmail("FeedbackEmail", this.feedback),
