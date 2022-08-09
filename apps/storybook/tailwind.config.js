@@ -1,6 +1,6 @@
 module.exports = {
   content: ["../../packages/ui/**/*.{js,ts,jsx,tsx}", "./stories/**/*.{js,ts,tsx,jsx}"],
-  darkMode: "class",
+  // darkMode: "class",
   theme: {
     fontFamily: {
       cal: ["Cal Sans", "sans-serif"],
