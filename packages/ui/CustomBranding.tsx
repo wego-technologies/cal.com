@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { useBrandColors } from "@calcom/embed-core/embed-iframe";
 
-const brandColor = "#292929";
+const brandColor = "#00a1d3";
 const brandTextColor = "#ffffff";
 const darkBrandColor = "#fafafa";
 
@@ -196,11 +196,9 @@ function normalizeHexCode(hex: string | null, dark: boolean) {
 function getContrastingTextColor(bgColor: string | null, dark: boolean): string {
   bgColor = bgColor == "" || bgColor == null ? (dark ? darkBrandColor : brandColor) : bgColor;
   const rgb = hexToRGB(bgColor);
-  // Force the text to be white
-  // const whiteContrastRatio = computeContrastRatio(rgb, [255, 255, 255]);
-  // const blackContrastRatio = computeContrastRatio(rgb, [41, 41, 41]); //#292929
-  // return whiteContrastRatio > blackContrastRatio ? brandTextColor : brandColor;
-  return brandTextColor;
+  const whiteContrastRatio = computeContrastRatio(rgb, [255, 255, 255]);
+  const blackContrastRatio = computeContrastRatio(rgb, [41, 41, 41]); //#292929
+  return whiteContrastRatio > blackContrastRatio ? brandTextColor : brandColor;
 }
 
 export function isValidHexCode(val: string | null) {
@@ -259,9 +257,9 @@ const BrandColor = ({
       /* gray--900 */
       --booking-darker-color: ${embedBrandingColors.darkerColor || "#292929"};
       --brand-color: ${lightVal};
-      --brand-text-color: ${getContrastingTextColor(lightVal, true)};
+      --brand-text-color: ${brandTextColor};
       --brand-color-dark-mode: ${darkVal};
-      --brand-text-color-dark-mode: ${getContrastingTextColor(darkVal, true)};
+      --brand-text-color-dark-mode: ${brandTextColor};
     `}
       </style>
     </Head>
